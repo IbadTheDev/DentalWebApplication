@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Home from './components/Home';
 import Prototypes from './components/Prototypes';
+import Footer from './components/Footer';
 import {
   BrowserRouter,
   Route,
@@ -22,6 +23,7 @@ function App() {
       <Route path="/prototypes" element ={ <Prototypes />}/>
     </Routes>
   </div>
+  <Footer/>
   </BrowserRouter>
       
     </>

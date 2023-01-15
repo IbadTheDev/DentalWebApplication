@@ -24,7 +24,7 @@ const About = () => {
             Labore Mollitia Cum Nisi, Sint, Expedita Rem Error Ipsa,
             Nesciunt Ab Provident. Aperiam, Officiis!
           </p>
-          <Button text='make appointment' />
+          {/* <Button text='make appointment' /> */}
         </div>
       </div>
     </div>

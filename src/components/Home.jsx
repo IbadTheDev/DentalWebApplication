@@ -18,7 +18,7 @@ const Home = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           Laudantium itaque, quasi aliquam alias tempora voluptatibus.
         </p>
-        <Button text='Get Appointment' />
+        {/* <Button text='Get Appointment' /> */}
       </div>
     </div>
   </section>

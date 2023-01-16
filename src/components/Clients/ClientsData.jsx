@@ -12,14 +12,17 @@ import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // StarIcons
 import StarIcons from './StarIcons';
+
+
 const ClientsData = () => {
 
+  
 const ClientCards = [
   {
     img: ImgOne,
     name: 'william',
     desc: 'Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Eos, Iure? Nemo Est Aspernatur Voluptatum Id, Laboriosam Asperiores Iure Omnis Alias?',
-    title: 'satisfied client'
+    title: 'Satisfied Customer'
   },
   {
     img: ImgTwo,
@@ -87,6 +90,7 @@ return(
            >{client.title}</span
            >
          </div>
+       
         </SwiperSlide>
        ))
      }

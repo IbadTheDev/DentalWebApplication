@@ -41,6 +41,7 @@ const Navv = () => {
       <NavLink to="/contact" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue">
         Appointments
       </NavLink>
+      
     </div>
     <div className="grid grid-rows-2 grid-flow-col gap-1">
     <button onClick={() => {navigate('/adminLogin')}} className='absolute top-2 right-14 bg-gray-800 text-white bg-blue py-1 px-3 rounded hover:bg-black inline-block hover:duration-300'>Admin Login</button>

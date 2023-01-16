@@ -3,18 +3,10 @@ import Heading from './Heading'
 // import {useNavigate} from 'react-router-dom'
 
 const UserLogin = () => {
-   const handleSubmit =async (e)=> {
-    e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type":"application/json",
-        
-      }
-    });
-    const json = await response.json()
-    console.log(json)
-   }
+   
+  const submitHandler = (values) => {
+    console.log(values)
+  }
   return (
     <section name='contact' className="py-20">
         <div className="max-w-[1200px] mx-auto px-4">

@@ -2,7 +2,7 @@ const User = require('../models/User')
 const bcrypt = require('bcryptjs')
 
 //Login Callback
-const loginController = async (req, res) => {
+const registerController = async (req,res) => {
 try {
     const existingUser = await User.findOne({email:req.body.email})
     if(existingUser){
@@ -17,13 +17,15 @@ try {
     res.status(201).send({message: 'Registered succesfully', success: true});
 }  catch (error) {
     console.log(error)
-    res.status(500).send({success:false, messafe: `register Controller ${error.message}`})
+    res.status(500)
+    .send({
+        success:false,
+        message: `register Controller ${error.message}`,
+    });
 }
-}
+};
 
-const registerController = () => {
+const loginController = () => {};
 
-}
-
-module.exports = {loginController, registerController}
+module.exports = {loginController, registerController};
 

@@ -1,17 +1,6 @@
-const express = require('express');
-const router = express.Router();
-const User = require('../models/User');
-const {body, validationResult } = require('express-validator');
-const bcrypt = require('bcryptjs');
-var jwt = require('jsonwebtoken');
-const {
-    registerController,
-    loginController
-} = require('../controllers/userCtrl')
-
-
-
-const JWT_secret = "IbadsCode";
+const express = require('express')
+const router = express.Router()
+const {registerController} = require('../controllers/userCtrl')
 
 
 //Create a user using: POST "/api/auth/createuser"
@@ -19,7 +8,7 @@ router.post('/register', registerController);
 
 
 // Login POST
-router.post('/login', loginController);
+// router.post('/login', loginController);
 
 //Authanticate a user using post "api/auth/login"
 // router.post('/login', loginController [

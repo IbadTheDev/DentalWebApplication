@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const {registerController, loginController} = require('../controllers/userCtrl')
+const {registerController, loginController, authController} = require('../controllers/userCtrl');
+const authMidware = require('../middleware/authMidware');
 
 
 //Create a user using: POST "/api/auth/createuser"
@@ -9,6 +10,9 @@ router.post('/register', registerController);
 
 // Login POST
 router.post('/login', loginController);
+
+//Auth POST
+router.post('/getUserData', authMidware, authController)
 
 //Authanticate a user using post "api/auth/login"
 // router.post('/login', loginController [

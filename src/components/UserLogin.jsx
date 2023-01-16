@@ -48,7 +48,6 @@ const UserLogin = () => {
                 <Form.Item name="password">
                 <Input
                   type="password"
-                  name="password"
                   placeholder="enter your password"
                   className="w-full p-3 outline-none"
                   required

@@ -1,5 +1,7 @@
 const User = require('../models/User')
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
+const { json } = require('react-router-dom');
+const jwt = require('jsonwebtoken')
 
 //Login Callback
 const registerController = async (req,res) => {
@@ -24,8 +26,40 @@ try {
     });
 }
 };
+ 
 
-const loginController = () => {};
+// Login callback
+const loginController = async(req,res) => {
+    try {
+        const user = await User.findOne({email:req.body.email})
+        if(!user){
+            return res.status(200).send({message:`user not found`, success:false})
+        }
+
+        const isMatch = await bcrypt.compare(req.body.password, user.password)
+        if(!isMatch)
+        {
+            return res.status(200).send({message: 'Authentication Invalid', success:false})
+        }
+        const token = jwt.sign({id:user._id},process.env.JWT_SECRET, {expiresIn: '1d'})
+        res.status(200).send({message:'Login Success', success:true, token})
+        const password = req.body.password
+        const salt = await bcrypt.genSalt(10)
+        const hashedPassword = await bcrypt.hash(password, salt)
+        req.body.password = hashedPassword
+        const newUser = new User(req.body)
+        await newUser.save()
+        res.status(201).send({message: 'Registered succesfully', success: true});
+    }  catch (error) {
+        console.log(error)
+        res.status(500)
+        .send({
+            success:false,
+            message: `register Controller ${error.message}`,
+        });
+    }
+
+};
 
 module.exports = {loginController, registerController};
 

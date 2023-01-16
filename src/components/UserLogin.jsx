@@ -1,18 +1,29 @@
 import React from 'react'
 import Heading from './Heading'
-import {useNavigate} from 'react-router-dom'
+// import {useNavigate} from 'react-router-dom'
 
 const UserLogin = () => {
-    let navigate = useNavigate();
+   const handleSubmit =async (e)=> {
+    e.preventDefault();
+    const response = await fetch("http://localhost:5000/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type":"application/json",
+        
+      }
+    });
+    const json = await response.json()
+    console.log(json)
+   }
   return (
     <section name='contact' className="py-20">
         <div className="max-w-[1200px] mx-auto px-4">
           <Heading title='Login to your Account' />
           <div className="bg-light-bg p-6 max-w-[30rem] mx-auto rounded">
-            <form action="#">
+            <form action="#" onSubmit={handleSubmit}>
               
               <div className="flex flex-col mb-4">
-                <label className="capitalize text-black mb-1">your email :</label>
+                <label htmlFor="email" className="capitalize text-black mb-1">your email :</label>
                 <input
                   type="email"
                   name="email"
@@ -22,7 +33,7 @@ const UserLogin = () => {
                 />
               </div>
               <div className="flex flex-col mb-4">
-                <label className="capitalize text-black mb-1">your password :</label>
+                <label htmlFor="password" className="capitalize text-black mb-1">your password :</label>
                 <input
                   type="password"
                   name="password"

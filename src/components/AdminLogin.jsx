@@ -1,9 +1,9 @@
 import React from 'react'
 import Heading from './Heading'
-import {useNavigate} from 'react-router-dom'
+// import {useNavigate} from 'react-router-dom'
 
 const AdminLogin = () => {
-    let navigate = useNavigate();
+    // let navigate = useNavigate();
   return (
     <section name='contact' className="py-20">
         <div className="max-w-[1200px] mx-auto px-4">

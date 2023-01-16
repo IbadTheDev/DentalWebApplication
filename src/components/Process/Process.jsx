@@ -1,4 +1,4 @@
-import { data } from 'autoprefixer'
+// import { data } from 'autoprefixer'
 import React from 'react'
 import Heading from '../Heading'
 import ProcessData from './ProcessData'

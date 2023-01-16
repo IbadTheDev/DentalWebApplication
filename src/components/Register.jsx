@@ -10,7 +10,7 @@ const Register = () => {
       try {
         const res = await axios.post('/api/auth/register', values)
         if(res.data.success){
-        message:success('Registered Successfully')
+        message.success('Registered Successfully')
         navigate('/login')
         }else{
           message.error(res.data.message)

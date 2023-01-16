@@ -12,7 +12,7 @@ const UserLogin = () => {
         <div className="max-w-[1200px] mx-auto px-4">
           <Heading title='Login to your Account' />
           <div className="bg-light-bg p-6 max-w-[30rem] mx-auto rounded">
-            <form action="#" onSubmit={handleSubmit}>
+            <form action="#" onSubmit={submitHandler}>
               
               <div className="flex flex-col mb-4">
                 <label htmlFor="email" className="capitalize text-black mb-1">your email :</label>

@@ -8,3 +8,9 @@
     @apply font-[Poppins] 
   }
 }
+
+.active{
+  color: turquoise;
+  
+
+}

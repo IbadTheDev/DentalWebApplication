@@ -2,7 +2,6 @@ import ImgOne from '../../assets/pic-1.png'
 import ImgTwo from '../../assets/pic-2.png'
 import ImgThree from '../../assets/pic-3.png'
 // fontawesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar , faStarHalfStroke } from '@fortawesome/free-solid-svg-icons'
 // Import Swiper styles
 import 'swiper/css';

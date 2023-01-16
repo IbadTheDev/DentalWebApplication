@@ -1,7 +1,14 @@
 import React from 'react'
-import Button from './Button'
 import AboutImg from '../assets/about-img.jpg'
+// import { useContext, useEffect } from 'react'
+// import noteContext from '../context/notes/noteContext'
+
 const About = () => {
+  // const a = useContext(noteContext)
+  // useEffect(() =>{
+  //   a.update();
+  //   //-eslint-disable-next-line
+  // },[])
   return (
     <section name='about' className="py-20">
     <div className="max-w-[1200px] mx-auto px-4">
@@ -23,6 +30,7 @@ const About = () => {
             Laboriosam Cupiditate Vero In Provident Ducimus. Totam Quas
             Labore Mollitia Cum Nisi, Sint, Expedita Rem Error Ipsa,
             Nesciunt Ab Provident. Aperiam, Officiis!
+            {/* <br>by {a.state.name}</br> */}
           </p>
           {/* <Button text='make appointment' /> */}
         </div>

@@ -1,20 +1,22 @@
 import React from "react";
 
-import { Navbar, Home, About, Services, Process, Clients, Contact, Footer } from './components'
+import { Home, About, Services, Process, Clients, Contact, Footer } from './components'
 
-import { BrowserRouter as Router,Routes,Route,Link } from "react-router-dom";
-import Navv from "./components/NavBar1";
+import { BrowserRouter as Router,Routes,Route} from "react-router-dom";
+import Navv from "./components/Navv";
 import Register from "./components/Register";
 import UserLogin from "./components/UserLogin";
 import AdminLogin from "./components/AdminLogin";
+// import NoteState from "./context/notes/NoteState";
 
 function App() {
   return (
     <>
+   
     <Router>
     <Navv/>
     <Routes>
-      <Route path="/home" element={<Home/>}/>
+      <Route exact path="/" element={<Home/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/services" element={<Services/>}/>
       <Route path="/process" element={<Process/>}/>

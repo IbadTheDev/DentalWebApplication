@@ -9,7 +9,7 @@ const Home = () => {
     try {
 const res = await axios.post('api/auth/getUserData',{},{
   headers:{
-    Authorization: "Bearer" + localStorage.getItem("token"),
+    Authorization: "Bearer " + localStorage.getItem("token"),
   },
   }
 );
